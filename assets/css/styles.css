@@ -1,0 +1,224 @@
+
+body{
+    background-color: brown;
+    }
+    
+    #start-quiz{
+    border-radius: 25px;
+    padding: 5px;
+    text-align: center;
+    background-color: blue;
+    margin-left: 15%;
+    margin-right: 15%;
+    color:antiquewhite;
+    
+    }
+    
+    #start-quiz h1{
+        font-size-adjust: inherit;
+        font-size: xx-large;
+        border-bottom: antiquewhite solid 2px;
+        /* margin-left: 20%;
+        margin-right:20%; */
+        background-color: antiquewhite;
+        padding-top: 10px;
+        padding-bottom: 2px;
+        margin: 0;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        color: blue;
+        
+    
+    }
+    
+    #start-quiz ul{
+        text-align: left;
+        color: antiquewhite;
+    }
+    
+    #start-btn{
+        border: 1px black solid;
+        border-radius: 15px;
+        background-color: antiquewhite;
+        margin-bottom: 25px;
+        box-shadow:-1px 1px 1px 0px rgba(255, 5, 5, 1);
+    
+    }
+    
+    #header{
+        text-align: center;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    .question-box-red{
+        border: solid 1px darkred;
+        margin: 1px;
+        padding: 1px;
+    }
+    .question-container{
+    
+      margin-left: 5%;
+      margin-right: 10%;
+      border-radius: 8px;
+      padding-left: 5%;
+      
+    }
+    
+    .question-container h3{
+        border-bottom: solid 4px antiquewhite;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: black;
+    
+    
+    }
+    
+    .answer-box{
+        margin-left:35px;
+        background-color:blue;
+        border-radius: 5px;
+        padding: 15px;   
+        color: antiquewhite;
+        
+    
+    }
+    
+    .answer-box .btn-container{
+        text-align: left;
+        margin: 12px 0 10px 25px;
+       
+    
+    }
+    
+    .btn-container button{
+        background-color:antiquewhite;
+        border-radius: 5px;
+        color:black;
+        box-shadow:-1px 1px 1px 0px rgba(255, 5, 5, 1);
+    
+    }
+    
+    
+    .answer-box .question-content{
+    
+        border-radius: 5px;
+        padding: 3px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+    .score-box{
+        border: blue 3px solid;
+        border-radius: 15px;
+        margin-left: 30%;
+        margin-right: 30%;
+        box-shadow:-2px 2px 1px 1px rgba(255, 5, 5, 1);
+    }
+    .score-box h2{
+        text-align: center;
+        background-color: blue;
+        border-top-right-radius: 11px;
+        border-top-left-radius: 11px;
+        color: antiquewhite;
+        border-bottom: black;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+    .score-box ol{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    
+    ol:nth-child(odd){
+        background-color: rgba(34, 84, 158, 0.4);
+    }
+    
+    #refresh-btn{
+        text-align: center;
+        margin-top: 15px;
+    }
+    #refresh-btn button{
+        box-shadow:-1px 1px 1px 1px rgba(255, 5, 5, 1);
+        border-radius: 5px;
+        background-color: blue;
+        color: antiquewhite;
+    }
+    
+    footer{
+        bottom: 0;
+        position:absolute;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        height: 40px;
+        background-color: brown;
+        border-top: blue solid 3px;
+        color: antiquewhite;
+    }
+    
+    #worth-designing{
+    padding: 0;
+    font-weight: lighter;
+    font-family: sans-serif;
+    margin-top:5px;
+    margin-right: 5px;
+    }
+    
+        #logo{
+            font-size: x-large;
+            background-color: navy;
+            border: solid 2px red;
+            border-radius: 15px;
+            padding-right: 2px;
+            padding-left: 3px;
+            font-weight: bolder;
+        }
+        #castle{
+            font-weight: bolder;
+            color: whitesmoke;
+        }
+        .W{
+            color: rgb(219, 205, 12);
+            font-weight: bolder;
+            font-size: x-large;
+            font-family: serif;
+        }
+        .D{
+            color: red;
+            font-weight: bolder;
+            font-size: x-large;
+            font-family: serif;
+        }
+        
+        @media only screen and (max-width: 400px){
+    
+        body{
+           margin: 0;
+           width: 100%;
+           padding: 0;
+        }
+        #start-quiz{
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        #start-info h1{
+            font-size: 40px;
+        }
+        #start-info ul{
+            font-size: xx-large;
+        }
+        #start-btn{
+            width: 130px;
+            font-size: x-large;
+        }
+        .score-box{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
