@@ -153,10 +153,10 @@ var countdown = function () {
 
 
     } else {
-        headerContent.querySelector("#timer-clock").innerText = "time" + secondMarker;
+        headerContent.querySelector("#timer-clock").innerText = "0:0" + secondMarker;
         if (secondMarker < 11){
              headerContent.querySelector("#timer-clock").setAttribute("style", "color: red;");
-             headerContent.querySelector("#timer-clock").innerText = "time" + secondMarker;
+             headerContent.querySelector("#timer-clock").innerText = "0:0" + secondMarker;
 
         } else {
             headerContent.querySelector("#timer-clock").removeAttribute("style");
