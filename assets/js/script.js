@@ -114,14 +114,14 @@ var countdown = function () {
 
 
     } else {
-        headerContent.querySelector("#timer-clock").innerText = "0:0" + secondMarker;
+        headerContent.querySelector("#timer-clock").innerText = secondMarker;
         if (secondMarker < 11){
              headerContent.querySelector("#timer-clock").setAttribute("style", "color: red;");
-             headerContent.querySelector("#timer-clock").innerText = "0:0" + secondMarker;
+             headerContent.querySelector("#timer-clock").innerText = secondMarker;
 
         } else {
             headerContent.querySelector("#timer-clock").removeAttribute("style");
-            headerContent.querySelector("#timer-clock").innerText = "" + secondMarker;
+            headerContent.querySelector("#timer-clock").innerText = secondMarker;
         };
     };
 
@@ -267,8 +267,6 @@ var loadScore = function () {
         scoreArr = firstScoreArr;
         saveScore();
     } else {
-
-        // console.log(scoreArr.sort(sortScore));
         sortedScores = scoreArr.sort(sortScore);
         scoreArr = sortedScores;
         console.log(scoreArr);
@@ -279,7 +277,7 @@ var loadScore = function () {
 
 
 var scoreDisplay = function () {
-    var Initials = prompt("Game over! Enter your initials. For example 'DMH'.");
+    var Initials = prompt("Game over! Enter your initials.");
     Initials = Initials.toUpperCase();
 
     var scoreDataObj = {

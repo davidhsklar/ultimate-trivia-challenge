@@ -61,14 +61,14 @@ body{
       border-radius: 8px;
       padding-left: 5%;
       border: 2px solid antiquewhite;
-      
+      color: antiquewhite;
     }
     
     .question-container h3{
         font-size: x-large;
         margin-top: 10px;
         margin-bottom: 20px;
-        color: black;
+        color: antiquewhite;
         text-align: center;
     
     
@@ -106,6 +106,7 @@ body{
         padding: 3px;
         margin-left: 5px;
         margin-bottom: 5px;
+        color: antiquewhite;
     }
     .score-box{
         border: blue 3px solid;
