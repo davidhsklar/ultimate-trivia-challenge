@@ -1,126 +1,87 @@
 var questionsArr = [
     {
-        ask: "Which of the following is not a valid data type?",
-        answerA: "Boolean",
-        answerB: "Number",
-        answerC: "String",
-        answerD: "All of the above are valid.",
-        answerCorrect: "D",
+        ask: "Which of the following is true?",
+        answerA: "Boolean is a true or false.",
+        answerB: "Math.Random will give you a round number",
+        answerC: "parseInt changes numbers into strings",
+        answerD: "All of the above are false.",
+        answerCorrect: "A",
         questionId: 1
     },
     {
-        ask: "Which of the keywords is not a binding in Javascript?",
-        answerA: "const",
-        answerB: "let",
-        answerC: "means",
-        answerD: "var",
-        answerCorrect: "C",
+        ask: "How do you increase the count by 1?",
+        answerA: "i++",
+        answerB: "i--",
+        answerC: "i++++",
+        answerD: "None of the above",
+        answerCorrect: "A",
         questionId: 2
     }, {
-        ask: "What does the -- operator do?",
-        answerA: "Decrement",
-        answerB: "Increment",
-        answerC: "Multiply",
-        answerD: "Subtract",
-        answerCorrect: "A",
+        ask: "What kind of brackets do you use to signify a empty array?",
+        answerA: "Curly Brackets",
+        answerB: "Round Brackets",
+        answerC: "Square Brackets",
+        answerD: "What's an array?",
+        answerCorrect: "C",
         questionId: 3
     }, {
-        ask: "How many times will 'for (var i =0; i <12; i++)' loop?",
-        answerA: "12",
-        answerB: "11",
-        answerC: "0",
-        answerD: "infinite",
-        answerCorrect: "A",
+        ask: "Where can you store information on users?",
+        answerA: "local storage",
+        answerB: "session storage",
+        answerC: "A storage unit",
+        answerD: "A and B",
+        answerCorrect: "D",
         questionId: 4
     }, {
-        ask: "What does the % operator do?",
-        answerA: "Decrement",
-        answerB: "Divide",
-        answerC: "Multiply",
-        answerD: "Division Remainder",
-        answerCorrect: "D",
+        ask: "What does DOM stand for?",
+        answerA: "Document Object Model",
+        answerB: "Document Object Module",
+        answerC: "Document On Main",
+        answerD: "Disco Over Motown",
+        answerCorrect: "A",
         questionId: 5
     }, {
-        ask: "For console.log( 1 + '1' ); what will be displayed in the console?",
-        answerA: "2",
-        answerB: "11",
-        answerC: "1 + '1'",
-        answerD: "undefined",
-        answerCorrect: "B",
+        ask: "What is an example of camel case?",
+        answerA: "thisone",
+        answerB: "this.one",
+        answerC: "Thisone",
+        answerD: "thisOne",
+        answerCorrect: "D",
         questionId: 6
     }, {
-        ask: "What does the logical operator ||  mean?",
-        answerA: "and",
-        answerB: "and/or",
-        answerC: "or",
-        answerD: "if",
-        answerCorrect: "C",
+        ask: "How do you define a function?",
+        answerA: "let",
+        answerB: "var",
+        answerC: "const",
+        answerD: "all of the above",
+        answerCorrect: "D",
         questionId: 7
     }, {
-        ask: "Which binding will propogate CONST or VAR?",
-        answerA: "CONST",
-        answerB: "They both will",
-        answerC: "Neither will",
-        answerD: "VAR",
-        answerCorrect: "D",
+        ask: "What does appending do?",
+        answerA: "moves an element into another",
+        answerB: "nothing",
+        answerC: "makes a child independent of the parent",
+        answerD: "creates an element",
+        answerCorrect: "A",
         questionId: 8
     }, {
-        ask: "Which of the follwing is in camel case notation?",
-        answerA: "this-One",
-        answerB: "this_One",
-        answerC: "thisOne",
-        answerD: "this.One",
-        answerCorrect: "C",
+        ask: "What will console.log(math.random) return?",
+        answerA: "a random non-rounded number",
+        answerB: "a random rounded number",
+        answerC: "a random negative number",
+        answerD: "a number that I can easily remember",
+        answerCorrect: "A",
         questionId: 9
     }, {
-        ask: "In the following function which is a parameter?  'function myFunction (a,b){math.floor(a-b);};'",
-        answerA: "math",
-        answerB: "b",
-        answerC: "floor",
-        answerD: "(a-b)",
+        ask: "What does JSON stand for?",
+        answerA: "JavaScript On Notice",
+        answerB: "JavaScript Object Notation",
+        answerC: "Juicy Steaks Or Not",
+        answerD: "JSON isn't real",
         answerCorrect: "B",
         questionId: 10
-    }, {
-        ask: "Which type of value does 'if(!myVar){};' check for?",
-        answerA: "All types",
-        answerB: "Number",
-        answerC: "Boolean",
-        answerD: "The type of data has nothing to do with this.",
-        answerCorrect: "C",
-        questionId: 11
-    }, {
-        ask: "What is another name for Javascript?",
-        answerA: "Java",
-        answerB: "ECMAScript",
-        answerC: "Netscape",
-        answerD: "Java++",
-        answerCorrect: "B",
-        questionId: 12
-    }, {
-        ask: "Which operator is a true equality check?",
-        answerA: "===",
-        answerB: "==",
-        answerC: "=",
-        answerD: "!=",
-        answerCorrect: "A",
-        questionId: 13
-    },  {
-        ask: "Which is not a type of loop?",
-        answerA: "for",
-        answerB: "while",
-        answerC: "do...while",
-        answerD: "All of the above are loops",
-        answerCorrect: "D",
-        questionId: 14
-    }, {
-        ask: "Which of the following is not an event that can be listened for?",
-        answerA: "click",
-        answerB: "keyup",
-        answerC: "volumeup",
-        answerD: "submit",
-        answerCorrect: "C",
-        questionId: 15
-    }
+    },
+    
 ];
 
 //Setting the Variables
