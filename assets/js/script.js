@@ -97,7 +97,13 @@ var questionNumber = 1;
 var quesIndex = 0;
 var scoreArr = [];
 
+
 //Functions
+
+var time = document.createElement("h1");
+time.id = "timer-clock";
+time.innerText = "90";
+headerContent.appendChild(time);
 
 var countdown = function () {
     secondMarker = startTime--;
@@ -132,26 +138,22 @@ var timer = function () {
     countdown();
 };
 
-    var createTimer = function () {
+var createTimer = function () {
 
-        var time = document.createElement("h1");
-        time.id = "timer-clock";
-        time.innerText = "1:30";
-        headerContent.appendChild(time);
-    
-        timer();
-    };
+    timer();
+};
 
-    var stopTimer = function () {
-        clearInterval(timerStart);
-        headerContent.querySelector("#timer-clock").innerText =  "You ran out of time! Score: " + score;
-        clearAnswer();
-        scoreDisplay();
-    };
 
-    
-    var timerStart = setInterval(countdown, 1300);
-    
+var timerStart = setInterval(countdown, 1300);
+
+var stopTimer = function () {
+    clearInterval(timerStart);
+    headerContent.querySelector("#timer-clock").innerText =  "You ran out of time! Score: " + score;
+    clearAnswer();
+    scoreDisplay();
+};
+
+
 
 
 //Start Button
