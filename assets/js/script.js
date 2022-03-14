@@ -100,10 +100,14 @@ var scoreArr = [];
 
 //Functions
 
+//Creating General timer
+
 var time = document.createElement("h1");
 time.id = "timer-clock";
 time.innerText = "90";
 headerContent.appendChild(time);
+
+// Creating the countdown of the timer and the style attributes
 
 var countdown = function () {
     secondMarker = startTime--;
@@ -133,6 +137,8 @@ var countdown = function () {
 
 };
 
+// Defining the timer as a function for DRY purposes
+
 var timer = function () {
 
     countdown();
@@ -146,6 +152,8 @@ var createTimer = function () {
 
 var timerStart = setInterval(countdown, 1300);
 
+// stop timer function
+
 var stopTimer = function () {
     clearInterval(timerStart);
     headerContent.querySelector("#timer-clock").innerText =  "You ran out of time! Score: " + score;
@@ -156,7 +164,7 @@ var stopTimer = function () {
 
 
 
-//Start Button
+// Start Button
 var startButtonHandler = function () {
 
     clearStart();
@@ -165,6 +173,8 @@ var startButtonHandler = function () {
     loadScore();
 
 };
+
+// Play again and resetting of quiz
 
 var playAgain = function () {
     location.reload();
@@ -179,6 +189,8 @@ var clearAnswer = function(){
     pageContent.removeChild(pageContent.childNodes[1]);
 }
 
+// Creating the questions
+
 var createQuestion = function (){
     var questionMaker = document.createElement("div");
     questionMaker.className = 'question-container';
@@ -187,8 +199,8 @@ var createQuestion = function (){
     questionMaker.innerHTML = "<h3 class='question'>" + questionsArr[quesIndex].ask + "</h3>";
     pageContent.appendChild(questionMaker);
 
+// Creating the answers
 
-    //Answers
     var form = document.createElement ("form");
     form.id = 'endCheck';
     form.classname = 'answer-box'
@@ -199,7 +211,8 @@ var createQuestion = function (){
     questionMaker.appendChild(form);
     
 
-    //Submit Button
+// Submit your quiz button
+
     var submitButtonDiv = document.createElement("div");
     submitButtonDiv.className = "btn-container";
     form.appendChild(submitButtonDiv);
@@ -212,6 +225,8 @@ var createQuestion = function (){
     return questionMaker;
 
 };
+
+// Creating the user scores
 
 var createScore = function () {
     var scoreBox = document.createElement("div");
@@ -239,10 +254,15 @@ var createScore = function () {
     };
 };
 
+
+//  Saving the score
+
 var saveScore = function () {
     console.log(scoreArr);
     localStorage.setItem("scoreArr", JSON.stringify(scoreArr));
 };
+
+// Sorting high scores from high to low
 
 var sortScore = function (a, b) {
     if (a.score < b.score) {
@@ -253,6 +273,8 @@ var sortScore = function (a, b) {
         return 0;
     }
 };
+
+// Loading the score into the score table to display to player
 
 var loadScore = function () {
     var getScores = localStorage.getItem("scoreArr", scoreArr);
@@ -277,6 +299,7 @@ var loadScore = function () {
 };
 
 
+// Displaying the score
 
 var scoreDisplay = function () {
     var Initials = prompt("Game over! Enter your initials.");
@@ -296,6 +319,7 @@ var scoreDisplay = function () {
     return Initials;
 };
 
+// Answer submit button and time penalty functions
 
 var submitButtonHandler = function (event) {
     event.preventDefault();
@@ -342,6 +366,7 @@ var submitButtonHandler = function (event) {
 
 
 
-//Event Listeners
+// Event Listeners
+
 startQuizDiv.addEventListener("click", startButtonHandler);
 pageContent.addEventListener("submit", submitButtonHandler);
