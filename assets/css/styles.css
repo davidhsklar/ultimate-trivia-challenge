@@ -49,11 +49,7 @@ body{
         padding: 0%;
     }
     
-    .question-box-red{
-        border: solid 1px darkred;
-        margin: 1px;
-        padding: 1px;
-    }
+    
     .question-container{
     
       margin-left: 5%;
