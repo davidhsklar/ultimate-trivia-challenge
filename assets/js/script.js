@@ -110,19 +110,19 @@ var countdown = function () {
     if (secondMarker <= - 1) {
         stopTimer();
         headerContent.querySelector("#timer-clock").removeAttribute("style");
-        headerContent.querySelector("#timer-clock").setAttribute("style", "color: navy;");
+        headerContent.querySelector("#timer-clock").setAttribute("style", "color: blue;");
 
 
     } else if (questionNumber > questionsArr.length) {
         clearInterval(timerStart);
         headerContent.querySelector("#timer-clock").removeAttribute("style");
-        headerContent.querySelector("#timer-clock").setAttribute("style", "color: navy;");
+        headerContent.querySelector("#timer-clock").setAttribute("style", "color: blue;");
 
 
     } else {
         headerContent.querySelector("#timer-clock").innerText = secondMarker;
         if (secondMarker < 11){
-             headerContent.querySelector("#timer-clock").setAttribute("style", "color: red;");
+             headerContent.querySelector("#timer-clock").setAttribute("style", "color: white;");
              headerContent.querySelector("#timer-clock").innerText = secondMarker;
 
         } else {
@@ -166,7 +166,7 @@ var startButtonHandler = function () {
 
 };
 
-var againButtonHandler = function () {
+var playAgain = function () {
     location.reload();
 
 };
@@ -219,7 +219,7 @@ var createScore = function () {
     scoreBox.id = "score-box";
     pageContent.appendChild(scoreBox);
     var again = document.querySelector("#score-box");
-    pageContent.addEventListener("click", againButtonHandler);
+    pageContent.addEventListener("click", playAgain);
 
 
     var scoreBanner = document.createElement("h2")
@@ -255,10 +255,10 @@ var sortScore = function (a, b) {
 };
 
 var loadScore = function () {
-    var gotScores = localStorage.getItem("scoreArr", scoreArr);
-    scoreArr = JSON.parse(gotScores);
+    var getScores = localStorage.getItem("scoreArr", scoreArr);
+    scoreArr = JSON.parse(getScores);
 
-    if (!gotScores) {
+    if (!getScores) {
         var firstScoreArr = [
             {
                 initials: "",
@@ -317,7 +317,7 @@ var submitButtonHandler = function (event) {
                 startTime--;
                 startTime--;
                 startTime--;
-                headerContent.querySelector("#timer-clock").setAttribute("style", "color: red;");
+                headerContent.querySelector("#timer-clock").setAttribute("style", "color: white;");
                 headerContent.querySelector("#timer-clock").innerText = ":" + (secondMarker-1) + "(-10)";
             }
         }
